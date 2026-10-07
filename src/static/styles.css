@@ -98,12 +98,56 @@ section h3 {
 }
 
 .participants ul {
-  padding-left: 22px;
+  list-style: none;
+  padding: 0;
 }
 
 .participants li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin: 4px 0;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.participant-email {
+  min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.participant-remove {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #b42318;
+}
+
+.participant-remove:hover {
+  background-color: #ffebe9;
+}
+
+.participant-remove:focus-visible {
+  outline: 2px solid #b42318;
+  outline-offset: 2px;
+}
+
+.participant-remove svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .participants-empty {
